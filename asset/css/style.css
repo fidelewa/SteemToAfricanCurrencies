@@ -1,13 +1,13 @@
-/* Définition des ../polices personnalisées */
+/* Defining custom font */
 
 @font-face
 {
     font-family: 'Dayrom';
-    src: url('../polices/dayrom.eot');
-    src: url('../polices/dayrom.eot?#iefix') format('embedded-opentype'),
-        url('../polices/dayrom.woff') format('woff'),
-        url('../polices/dayrom.ttf') format('truetype'),
-        url('../polices/dayrom.svg#Dayrom') format('svg');
+    src: url('../fonts/dayrom.eot');
+    src: url('../fonts/dayrom.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/dayrom.woff') format('woff'),
+        url('../fonts/dayrom.ttf') format('truetype'),
+        url('../fonts/dayrom.svg#Dayrom') format('svg');
     font-weight: normal;
     font-style: normal;
 }
