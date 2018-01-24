@@ -18,23 +18,11 @@ $(document).ready(function() {
 
     $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xof",data.quotes['USDXOF']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xaf",data.quotes['USDXAF']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ngn",data.quotes['USDNGN']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ghs",data.quotes['USDGHS']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_zar",data.quotes['USDZAR']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ugx",data.quotes['USDUGX']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
     })
     .fail(function() {
@@ -57,23 +45,11 @@ setInterval(function(){
 
     $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xof",data.quotes['USDXOF']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xaf",data.quotes['USDXAF']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ngn",data.quotes['USDNGN']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ghs",data.quotes['USDGHS']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_zar",data.quotes['USDZAR']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ugx",data.quotes['USDUGX']);
-    })
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
     })
     .fail(function() {
