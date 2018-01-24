@@ -34,6 +34,9 @@ $(document).ready(function() {
     $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ugx",data.quotes['USDUGX']);
     })
+    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
+        sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
+    })
     .fail(function() {
         alert( "currencylayer.com not reachable : cannot get Steem price" );
     });
@@ -69,6 +72,9 @@ setInterval(function(){
     })
     $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_ugx",data.quotes['USDUGX']);
+    })
+    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
+        sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
     })
     .fail(function() {
         alert( "currencylayer.com not reachable : cannot get Steem price" );
@@ -118,6 +124,12 @@ $("#steem").on("keyup", function() {
     var sbd_ugx = this.value * steem_price_ugx / sbd_price_ugx
     $("#sbd").val(Number(sbd_ugx).toFixed(2));
 
+    var steem_price_kes = sessionStorage.getItem("steem_price") * sessionStorage.getItem("USD_price_kes")
+    $("#kes").val(Number(this.value * steem_price_kes).toFixed(2));
+    var sbd_price_kes = sessionStorage.getItem("sbd_price") * sessionStorage.getItem("USD_price_kes")
+    var sbd_kes = this.value * steem_price_kes / sbd_price_kes
+    $("#sbd").val(Number(sbd_kes).toFixed(2));
+
 });
 $("#sbd").on("keyup", function() {
     var sbd_price_xof = sessionStorage.getItem("sbd_price") * sessionStorage.getItem("USD_price_xof")
@@ -155,6 +167,12 @@ $("#sbd").on("keyup", function() {
     var steem_price_ugx = sessionStorage.getItem("steem_price") * sessionStorage.getItem("USD_price_ugx")
     var steem_ugx = this.value * sbd_price_ugx / steem_price_ugx
     $("#steem").val(Number(steem_ugx).toFixed(2));
+
+    var sbd_price_kes = sessionStorage.getItem("sbd_price") * sessionStorage.getItem("USD_price_kes")
+    $("#kes").val(Number(this.value * sbd_price_kes).toFixed(2));
+    var steem_price_kes = sessionStorage.getItem("steem_price") * sessionStorage.getItem("USD_price_kes")
+    var steem_kes = this.value * sbd_price_kes / steem_price_kes
+    $("#steem").val(Number(steem_kes).toFixed(2));
 
 });
 
@@ -198,4 +216,11 @@ $("#ugx").on("keyup", function() {
     $("#steem").val(Number(this.value / steem_price_ugx).toFixed(2));
     var sbd_price_ugx = sessionStorage.getItem("sbd_price") * sessionStorage.getItem("USD_price_ugx")
     $("#sbd").val(Number(this.value / sbd_price_ugx).toFixed(2));
+});
+
+$("#kes").on("keyup", function() {
+    var steem_price_kes = sessionStorage.getItem("steem_price") * sessionStorage.getItem("USD_price_kes")
+    $("#steem").val(Number(this.value / steem_price_kes).toFixed(2));
+    var sbd_price_kes = sessionStorage.getItem("sbd_price") * sessionStorage.getItem("USD_price_kes")
+    $("#sbd").val(Number(this.value / sbd_price_kes).toFixed(2));
 });
