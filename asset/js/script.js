@@ -16,7 +16,7 @@ $(document).ready(function() {
         alert( "CoinMarketCap not reachable : cannot get Steem price" );
     });
 
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
+    $.get('https://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xof",data.quotes['USDXOF']);
         sessionStorage.setItem("USD_price_xaf",data.quotes['USDXAF']);
         sessionStorage.setItem("USD_price_ngn",data.quotes['USDNGN']);
@@ -43,7 +43,7 @@ setInterval(function(){
         alert( "CoinMarketCap not reachable : cannot get Steem price" );
     });
 
-    $.get('http://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
+    $.get('https://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
         sessionStorage.setItem("USD_price_xof",data.quotes['USDXOF']);
         sessionStorage.setItem("USD_price_xaf",data.quotes['USDXAF']);
         sessionStorage.setItem("USD_price_ngn",data.quotes['USDNGN']);
