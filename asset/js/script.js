@@ -4,16 +4,12 @@ $(document).ready(function() {
         sessionStorage.setItem("steem_price",data[0].price_usd);
         $(".steem_price").html(Number(sessionStorage.getItem("steem_price")).toFixed(2));
     })  
-      .fail(function() {
-        alert( "CoinMarketCap not reachable : cannot get Steem price" );
-    });
-
     $.get('https://api.coinmarketcap.com/v1/ticker/steem-dollars/', function(data) {
         sessionStorage.setItem("sbd_price",data[0].price_usd);
         $(".sbd_price").html(Number(sessionStorage.getItem("sbd_price")).toFixed(2));
     })  
       .fail(function() {
-        alert( "CoinMarketCap not reachable : cannot get Steem price" );
+        alert( "coinmarketcap.com is not reachable : cannot get Steem and Steem dollars price" );
     });
 
     $.get('https://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
@@ -26,7 +22,7 @@ $(document).ready(function() {
         sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
     })
     .fail(function() {
-        alert( "currencylayer.com not reachable : cannot get Steem price" );
+        alert( "currencylayer.com not reachable : cannot get USD price" );
     });
     
 setInterval(function(){
@@ -34,13 +30,13 @@ setInterval(function(){
         sessionStorage.setItem("steem_price",data[0].price_usd);
     })  
       .fail(function() {
-        alert( "CoinMarketCap not reachable : cannot get Steem price" );
+        alert( "coinmarketcap.com is not reachable : cannot get Steem price" );
     });
     $.get('https://api.coinmarketcap.com/v1/ticker/steem-dollars/', function(data) {
         sessionStorage.setItem("sbd_price",data[0].price_usd);
     })  
       .fail(function() {
-        alert( "CoinMarketCap not reachable : cannot get Steem price" );
+        alert( "coinmarketcap.com is not reachable : cannot get Steem price" );
     });
 
     $.get('https://www.apilayer.net/api/live?access_key=de8824ef604098fccd72a021998e3db7&format=1', function(data) {
@@ -53,7 +49,7 @@ setInterval(function(){
         sessionStorage.setItem("USD_price_kes",data.quotes['USDKES']);
     })
     .fail(function() {
-        alert( "currencylayer.com not reachable : cannot get Steem price" );
+        alert( "currencylayer.com not reachable : cannot get USD price" );
     });
 
     $(".steem_price").html(Number(sessionStorage.getItem("steem_price")).toFixed(2));
