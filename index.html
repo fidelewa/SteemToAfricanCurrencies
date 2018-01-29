@@ -19,20 +19,20 @@
                     <div class="row">
                             <div class="col-md-6">
                                 <div class="row v_centuring_label">
-                                    <div class="col-md-5 right col-md-offset-1">
-                                        <label for="steem" class="form-control-label">Steem (Price : <span class="steem_price"></span> USD) :</label>
+                                    <div class="col-md-5 right col-md-offset-1" id="lb_steem">
+                                        <label for="steem" class="form-control-label">Steem (Price : <span class="steem_price"></span> USD)</label>
                                     </div>
-                                    <div class="col-md-6 left">
+                                    <div class="col-md-6 left" style="padding-right:0px;">
                                             <input placeholder="Steem" type="text" name="steem" id="steem" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                     <div class="row v_centuring_label">
-                                        <div class="col-md-5 col-md-offset-1" style="padding-left:0px;">
-                                            <label for="sbd" class="form-control-label">Steem dollars (Price:<span class="sbd_price"></span> USD):</label>
+                                        <div class="col-md-5 col-md-offset-1" style="padding-left:0px;" id="lb_sbd">
+                                            <label for="sbd" class="form-control-label">Steem dollars (Price : <span class="sbd_price"></span> USD)</label>
                                         </div>
-                                        <div class="col-md-6 left">
+                                        <div class="col-md-6 left" style="padding-right:0px;">
                                             <input placeholder="Steem Dollars" type="text" name="sbd" id="sbd" class="form-control">
                                         </div>
                                     </div>
@@ -41,38 +41,40 @@
             </div> 
                     <div class="row" id="black_line">
                         <div class="col-md-2 centering">
-                            <label for="xof" class="form-control-label">XOF :</label>
-                            <input type="text" name="xof" id="xof" placeholder="Xof" class="form-control">
-                        </div>
-                        <div class="col-md-2 centering">
-                            <label for="xaf" class="form-control-label">XAF :</label>
-                            <input type="text" name="xaf" id="xaf" placeholder="Xaf" class="form-control">
-                        </div>
-                        <div class="col-md-2 centering">
-                            <label for="ngn" class="form-control-label">NAIRA :</label>
-                            <input type="text" name="ngn" id="ngn" placeholder="Naira" class="form-control">
-                        </div>
-                        <div class="col-md-2 centering">
-                            <label for="ghs" class="form-control-label">CEDI :</label>
+                            <label for="ghs" class="form-control-label" id="lb_ghs">CEDI</label>
                             <input type="text" name="ghs" id="ghs" placeholder="Cedi" class="form-control">
                         </div>
                         <div class="col-md-2 centering">
-                            <label for="zar" class="form-control-label">RAND :</label>
+                            <label for="kes" class="form-control-label" id="lb_kes">KENYA SHILLING</label>
+                            <input type="text" name="kes" id="kes" placeholder="Kenya Shilling" class="form-control">
+                        </div>
+                        <div class="col-md-2 centering">
+                            <label for="ngn" class="form-control-label" id="lb_ngn">NAIRA</label>
+                            <input type="text" name="ngn" id="ngn" placeholder="Naira" class="form-control">
+                        </div>
+                        <div class="col-md-2 centering">
+                            <label for="zar" class="form-control-label" id="lb_zar">RAND</label>
                             <input type="text" name="zar" id="zar" placeholder="Rand" class="form-control">
                         </div>
                         <div class="col-md-2 centering">
-                            <label for="ugx" class="form-control-label">UGANDA SHILLING :</label>
-                            <input type="text" name="ugx" id="ugx" placeholder="Uganda Shilling" class="form-control">
+                                <label for="ugx" class="form-control-label" id="lb_ugx">UGANDA SHILLING</label>
+                                <input type="text" name="ugx" id="ugx" placeholder="Uganda Shilling" class="form-control">
+                        </div>
+                        <div class="col-md-2 centering">
+                                <label for="xaf" class="form-control-label" id="lb_xaf">XAF</label>
+                                <input type="text" name="xaf" id="xaf" placeholder="Xaf" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2 centering">
-                            <label for="kes" class="form-control-label">KENYA SHILLING :</label>
-                            <input type="text" name="kes" id="kes" placeholder="Kenya Shilling" class="form-control">
+                                <label for="xof" class="form-control-label" id="lb_xof">XOF</label>
+                                <input type="text" name="xof" id="xof" placeholder="Xof" class="form-control">
                         </div>
                     </div>
         </div>
-        <footer>SteemToAfricanCurrencies - made by <a target="_blank" href="https://steemit.com/@fiderlet">@fiderlet</a></footer>
+        <footer>
+            <p>SteemToAfricanCurrencies - made by <a target="_blank" href="https://steemit.com/@fiderlet">@fiderlet</a></p>
+        </footer>
     </div>
     <script src="asset/js/script.js"></script>
 </body>
