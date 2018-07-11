@@ -1,10 +1,9 @@
-var deferredPrompt; // déclaration de la variable invite différée
+var deferredPrompt;
 
 if (!window.Promise) {
-  window.Promise = Promise; // Si la promesse de la fenêtre n'existe pas, on la définit
+  window.Promise = Promise;
 }
 
-// Si le naviguateur web peut enregistrer des services worker alors, on enregistre le service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/sw.js')
@@ -16,7 +15,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Définition du déclencheur de l'évènement "beforeinstallprompt"
 window.addEventListener('beforeinstallprompt', function(event) {
   console.log('beforeinstallprompt fired');
   event.preventDefault();
