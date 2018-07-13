@@ -1,0 +1,23 @@
+{
+  "name": "steem-to-african-currencies",
+  "version": "1.1.0",
+  "description": "A tool to convert your SBD/STEEM directely in African currencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fidelewa/SteemToAfricanCurrencies.git"
+  },
+  "author": "Fidele W. Avi",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "~0.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fidelewa/SteemToAfricanCurrencies/issues"
+  },
+  "homepage": "https://github.com/fidelewa/SteemToAfricanCurrencies#readme"
+}
